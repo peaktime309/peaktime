@@ -1,3 +1,25 @@
 spring:
+  application:
+    name: PeakTime
+
+  datasource:
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
   profiles:
     include: secret
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
