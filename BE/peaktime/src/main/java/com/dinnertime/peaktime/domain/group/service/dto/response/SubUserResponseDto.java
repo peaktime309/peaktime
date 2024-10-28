@@ -15,6 +15,5 @@ import java.util.List;
 public class SubUserResponseDto {
     private Long userId;
     private String userLoginId;
-//    private String nickname;
-
+    private String nickname;
 }
