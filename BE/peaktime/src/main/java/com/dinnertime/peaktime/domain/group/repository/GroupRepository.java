@@ -1,7 +1,3 @@
-package com.dinnertime.peaktime.domain.group.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import com.dinnertime.peaktime.domain.group.entity.Group;
-
-public interface GroupRepository extends JpaRepository<Group,Long> {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0695e0e7c17f5a280759591863a9065334b1f203a052ec67fb6b27e90af9b71
+size 793
