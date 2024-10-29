@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63f5c1e7044a1d8f8caacb47fd6b82d1f3c4a4b4adf4e419608a2d62bdb15488
-size 571
+package com.dinnertime.peaktime.domain.group.service.dto.response;
+
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class GroupListResponseDto {
+
+    private List<GroupItemResponseDto> groupList;
+
+    @Builder
+    public GroupListResponseDto(List<GroupItemResponseDto> groupList) {
+        this.groupList = groupList;
+    }
+}
