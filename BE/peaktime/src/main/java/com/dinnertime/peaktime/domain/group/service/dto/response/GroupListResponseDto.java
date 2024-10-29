@@ -14,7 +14,7 @@ public class GroupListResponseDto {
     private List<GroupItemResponseDto> groupList;
 
     @Builder
-    public GroupListResponseDto(List<GroupItemResponseDto> groupList) {
+    private GroupListResponseDto(List<GroupItemResponseDto> groupList) {
         this.groupList = groupList;
     }
 }
