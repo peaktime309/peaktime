@@ -1,0 +1,12 @@
+/* Flowbite를 위한 설정 */
+@import "flowbite";
+
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
