@@ -1,20 +1,3 @@
-package com.dinnertime.peaktime.domain.group.service.dto.request;
-
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class GroupPutRequestDto {
-
-    @NotBlank
-    @Length(max = 32)
-    private String title;
-
-    @NotNull
-    private Long presetId;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a4d8a0d695fe5e12db3bb82b0fac49770f140eb59fa893f5c4329b9d627ac687
+size 647
