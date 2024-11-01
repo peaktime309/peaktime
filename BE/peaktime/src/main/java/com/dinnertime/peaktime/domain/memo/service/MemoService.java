@@ -1,15 +1,3 @@
-package com.dinnertime.peaktime.domain.memo.service;
-
-import com.dinnertime.peaktime.domain.memo.repository.MemoRepository;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-
-@Slf4j
-@RequiredArgsConstructor
-@Service
-public class MemoService {
-
-//    private final MemoRepository memoRepository;
-    // 메모 조회, 삭제 구현
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:31441a9f2f0ca4141191adefaf825845b6a4beee1a0d92bc4076859e0d32308a
+size 3259
