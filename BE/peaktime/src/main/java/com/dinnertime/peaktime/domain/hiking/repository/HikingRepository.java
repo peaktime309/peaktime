@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface HikingRepository extends JpaRepository<Hiking, Long> {
+public interface HikingRepository extends JpaRepository<Hiking, Long>, HikingRepositoryCustom {
 }
