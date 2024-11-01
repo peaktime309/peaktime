@@ -1,16 +1,3 @@
-package com.dinnertime.peaktime.domain.summary.service;
-
-import com.dinnertime.peaktime.domain.summary.repository.SummaryRepository;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-
-@Slf4j
-@RequiredArgsConstructor
-@Service
-public class SummaryService {
-
-    // 요약 조회, 저장, 삭제 구현
-//    private final SummaryRepository summaryRepository;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba229918853c42a08a0b33eab815af77faa7eaab12e2a39d0f4cd8a631e9a077
+size 1310
