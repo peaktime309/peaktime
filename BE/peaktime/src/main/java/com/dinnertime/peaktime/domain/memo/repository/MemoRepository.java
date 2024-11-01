@@ -1,13 +1,3 @@
-package com.dinnertime.peaktime.domain.memo.repository;
-
-
-import com.dinnertime.peaktime.domain.memo.entity.Memo;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-@Repository
-public interface MemoRepository extends JpaRepository<Memo, Long> {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8818805132e0216b4a87283fb77409694f61d760f8cf92d6157c75db37d3670
+size 598
