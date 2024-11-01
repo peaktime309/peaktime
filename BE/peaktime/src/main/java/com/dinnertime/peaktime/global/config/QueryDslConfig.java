@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d6a084246a590f4e9eec056fa93d7198493b47d2dee84cb9de2d63db6e32b8d4
-size 525
+package com.dinnertime.peaktime.global.config;
+
+import com.querydsl.jpa.impl.JPAQueryFactory;
+import jakarta.persistence.EntityManager;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class QueryDslConfig {
+
+    @Bean
+    public JPAQueryFactory jpaQueryFactory(EntityManager entityManager) {
+        return new JPAQueryFactory(entityManager);
+    }
+}
