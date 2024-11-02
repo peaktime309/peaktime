@@ -1,9 +1,3 @@
-function Loft() {
-  return (
-    <div className="bg-teal-100 h-[100vh] w-[100vw] absolute top-0 left-0 z-[-1] flex justify-center items-center">
-      Loft
-    </div>
-  );
-}
-
-export default Loft;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ebe9be50d29c4242afbd34dbe21a02fc43326073f1aa2a441b850e7c78351062
+size 6758
