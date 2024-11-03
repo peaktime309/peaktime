@@ -1,11 +1,3 @@
-package com.dinnertime.peaktime.domain.summary.repository;
-
-import com.dinnertime.peaktime.domain.summary.entity.Summary;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface SummaryRepository extends JpaRepository<Summary, Long> {
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2062d22e6c7403465b3eff9af3cdcef0c205abab11458b7c0eba8106fb444c51
+size 552
