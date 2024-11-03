@@ -13,5 +13,5 @@ public class TimerCreateRequestDto {
     private LocalDateTime startTime;
     private int attentionTime;
     private Boolean isRepeat;
-    private int[] repeatDay;
+    private int repeatDay;
 }
