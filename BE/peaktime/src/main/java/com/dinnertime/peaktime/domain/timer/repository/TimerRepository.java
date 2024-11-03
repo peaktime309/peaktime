@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface TimerRepository extends JpaRepository<Timer, Long> {
+public interface TimerRepository extends JpaRepository<Timer, Long>, TimerRepositoryCustom {
     List<Timer> findByGroup_GroupId(Long groupId);
     Optional<Timer> findByTimerId(Long timerId);
 }
