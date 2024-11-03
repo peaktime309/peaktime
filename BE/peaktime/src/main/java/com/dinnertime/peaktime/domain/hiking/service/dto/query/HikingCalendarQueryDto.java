@@ -9,6 +9,6 @@ import java.time.LocalDate;
 @Getter
 @ToString
 public class HikingCalendarQueryDto {
-    private Date date;
-    private Long intensity;
+    private LocalDate date;
+    private Integer totalMinute;
 }
