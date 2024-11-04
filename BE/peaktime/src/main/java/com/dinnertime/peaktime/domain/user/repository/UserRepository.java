@@ -1,12 +1,3 @@
-package com.dinnertime.peaktime.domain.user.repository;
-
-import com.dinnertime.peaktime.domain.user.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
-
-@Repository
-public interface UserRepository extends JpaRepository<User, Long>, UserRepositoryCustom {
-    Optional<User> findByUserIdAndIsDeleteFalse(long userId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:43b20661b86093350c443dc33eb71421f0782e7d9f55d733dd633fac868a3a9a
+size 524
