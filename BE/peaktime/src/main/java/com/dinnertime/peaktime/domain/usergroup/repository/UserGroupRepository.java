@@ -1,13 +1,3 @@
-package com.dinnertime.peaktime.domain.usergroup.repository;
-
-import com.dinnertime.peaktime.domain.group.entity.Group;
-import com.dinnertime.peaktime.domain.usergroup.entity.UserGroup;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-@Repository
-public interface UserGroupRepository extends JpaRepository<UserGroup, Long> {
-    List<UserGroup> findAllByGroup(Group group);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:949bfeb2ac715a62a478e72c57d1c15054507b6ff92ce0157103f199a0ce13da
+size 572
