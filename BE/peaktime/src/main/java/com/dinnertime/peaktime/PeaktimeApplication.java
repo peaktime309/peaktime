@@ -8,6 +8,7 @@ public class PeaktimeApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(PeaktimeApplication.class, args);
+
     }
 
 }
