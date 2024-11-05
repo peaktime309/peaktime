@@ -11,9 +11,4 @@ public class HikingStatisticQueryDto {
     private Long totalHikingCount;
     private Integer totalHikingSuccessCount;
     private Integer totalBlockedCount;
-    private Integer preferTimeZone;
-    @Setter
-    private List<BlockInfo> mostSiteList;
-    @Setter
-    private List<BlockInfo> mostProgramList;
 }

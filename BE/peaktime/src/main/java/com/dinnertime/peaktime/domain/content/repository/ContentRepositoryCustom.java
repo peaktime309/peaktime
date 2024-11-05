@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ContentRepositoryCustom {
     List<BlockInfo> getTopBlockInfoList(String type, Long hikingId);
+
+    List<BlockInfo> getTopBlockInfoListByUserId(String type, Long userId);
 }
