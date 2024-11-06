@@ -6,7 +6,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "netmarbleL";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.1/netmarbleL.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   margin: 0 auto;
   text-align: center;
+}
+
+* {
+  font-family: "netmarbleL";
 }
