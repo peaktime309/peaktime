@@ -1,12 +1,3 @@
-package com.dinnertime.peaktime.domain.schedule.repository;
-
-import com.dinnertime.peaktime.domain.schedule.entity.Schedule;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
-
-import java.util.List;
-
-@Repository
-public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
-    List<Schedule> findAllByDayOfWeek(int dayOfWeek);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcf656f537908d3ff4802e9e82b3d0d95353c770f3e5892918ae4393b7436126
+size 559
