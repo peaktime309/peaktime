@@ -1,20 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
-function StatisticPage() {
-  // 라우팅 설정
-  const navigate = useNavigate();
-
-  // 뒤로가기
-  const goBack = () => {
-    navigate(-1);
-  };
-
-  return (
-    <>
-      <div>StatisticPage</div>
-      <button onClick={goBack}>돌아가기</button>
-    </>
-  );
-}
-
-export default StatisticPage;
+version https://git-lfs.github.com/spec/v1
+oid sha256:417db75a75ef39afd1f67fbede6f19f53f06769872a6381ca7d5a6d533d0db0a
+size 3560
