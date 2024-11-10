@@ -1,20 +1,3 @@
-import PropTypes from "prop-types";
-
-function Calendar({ onDayClick }) {
-  // 날짜 클릭
-  const handleDay = (day) => {
-    onDayClick(day);
-  };
-
-  return (
-    <div className="absolute left-[10vw] w-[30vw] h-[100vh] bg-green-200">
-      Calendar
-      <button onClick={() => handleDay(1)}>날짜</button>
-    </div>
-  );
-}
-// props validation 추가
-Calendar.propTypes = {
-  onDayClick: PropTypes.func.isRequired,
-};
-export default Calendar;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e5ede5b5f06ee3981d5dc53ee412def91c0e8f7e623fb43f313465da5b3fd54
+size 2832
