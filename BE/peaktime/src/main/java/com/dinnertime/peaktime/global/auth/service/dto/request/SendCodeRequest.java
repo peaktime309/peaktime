@@ -1,4 +1,4 @@
-package com.dinnertime.peaktime.domain.user.service.dto.request;
+package com.dinnertime.peaktime.global.auth.service.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.AccessLevel;
