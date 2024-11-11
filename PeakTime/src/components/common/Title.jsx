@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 
-const Title = ({ title }) => {
+function Title({ title }) {
   return (
-    <div className="relative left-[12vw] top-[5vh] w-[84vw] h-[4rem] p-5 bg-[#333333] bg-opacity-70 text-[3rem] text-white mb-[2vh] flex justify-center items-center">
-      <p>{title}</p>
+    <div className="w-[89vw] h-[10vh] ms-[11vw] pt-[3vh] text-[40px] font-bold text-start text-white">
+      {title}
     </div>
   );
-};
+}
 
 Title.propTypes = {
   title: PropTypes.string.isRequired,
