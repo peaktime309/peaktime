@@ -3,7 +3,7 @@ export const useUserStore = create((set) => {
   return {
     user: null,
     userActions: {
-      setuser: (userInfo) => set(() => ({ user: userInfo })),
+      setUser: (userInfo) => set(() => ({ user: userInfo })),
     },
   };
 });
