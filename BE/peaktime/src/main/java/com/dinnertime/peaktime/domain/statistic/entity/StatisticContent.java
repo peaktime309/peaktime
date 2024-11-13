@@ -1,4 +1,4 @@
-package com.dinnertime.peaktime.domain.hiking.entity;
+package com.dinnertime.peaktime.domain.statistic.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,5 +9,5 @@ import lombok.Setter;
 @NoArgsConstructor
 public class StatisticContent {
     private String name;
-    private String usingTime;
+    private Integer usingTime;
 }
