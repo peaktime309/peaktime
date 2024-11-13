@@ -1,13 +1,3 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  css: {
-    postcss: "./postcss.config.js", // PostCSS 설정 파일 경로
-  },
-  server: {
-    historyApiFallback: true, // SPA에서 히스토리 API를 사용할 때 모든 요청을 index.html로 리디렉션
-  },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:637fd702aab8d03ad2e124dff322515ffcefdb05bb59ddb6ad4e51eef383e155
+size 1775
