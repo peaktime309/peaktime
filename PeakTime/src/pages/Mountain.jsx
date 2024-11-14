@@ -1,9 +1,3 @@
-function Mountain() {
-  return (
-    <div className="bg-pink-100 h-[100vh] w-[100vw] absolute top-0 left-0 z-0 flex justify-center items-center">
-      Mountain
-    </div>
-  );
-}
-
-export default Mountain;
+version https://git-lfs.github.com/spec/v1
+oid sha256:3893f2826b3052f92057b2b833a6170f2bce60a306175d1fe1f44ef812184cdb
+size 6017
