@@ -1,20 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
-function EmailChangePage() {
-  // 라우팅 설정
-  const navigate = useNavigate();
-
-  // 뒤로가기
-  const goBack = () => {
-    navigate(-1);
-  };
-
-  return (
-    <>
-      <div>EmailChangePage</div>
-      <button onClick={goBack}>돌아가기</button>
-    </>
-  );
-}
-
-export default EmailChangePage;
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fa80874d26fdd69fc43b24159953ecae69179586cafbc7401feeb24ca5c84bf
+size 12495
