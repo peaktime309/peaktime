@@ -3,7 +3,7 @@ export const useBackgroundStore = create((set) => {
   return {
     bg: "loft",
     bgActions: {
-      setBackground: (bgInfo) => set((state) => ({ background: bgInfo })),
+      setBackground: (bgInfo) => set((state) => ({ bg: bgInfo })),
     },
   };
 });
