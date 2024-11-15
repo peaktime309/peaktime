@@ -1,20 +1,3 @@
-import { useNavigate } from "react-router-dom";
-
-function PasswordReissuePage() {
-  // 라우팅 설정
-  const navigate = useNavigate();
-
-  // 뒤로가기
-  const goBack = () => {
-    navigate(-1);
-  };
-
-  return (
-    <>
-      <div>PasswordReissuePage</div>
-      <button onClick={goBack}>돌아가기</button>
-    </>
-  );
-}
-
-export default PasswordReissuePage;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d41681a48cffebdd8033be7eb2e96fb0799a92e13f830cd839f156e3b556cea1
+size 4502
