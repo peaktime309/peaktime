@@ -1,6 +1,6 @@
 import { SyncLoader } from "react-spinners";
 
-const SummaryLoadingOverlay = () => {
+const LoadingOverlay = () => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <SyncLoader color="#66AADF" height={100} width={100} />
@@ -8,4 +8,4 @@ const SummaryLoadingOverlay = () => {
   );
 };
 
-export default SummaryLoadingOverlay;
+export default LoadingOverlay;
