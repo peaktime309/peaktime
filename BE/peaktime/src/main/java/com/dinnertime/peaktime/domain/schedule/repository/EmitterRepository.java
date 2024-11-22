@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:32790c0547b7c28c5754966d966ec3f17ea2bcab52ee65529278b3cb9ce76403
-size 685
+package com.dinnertime.peaktime.domain.schedule.repository;
+
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
+
+import java.util.Map;
+
+public interface EmitterRepository {
+    SseEmitter save(String emitterId, SseEmitter emitter);
+
+    void saveEventCache(String emitterId, Object event);
+
+    //key값의 경우 groupId로 시작하므로
+    Map<String, SseEmitter> findEmitterByGroupId(Long groupId);
+
+    //key값의 경우 groupId로 시작하므로
+    Map<String, Object> findEmitterCacheByGroupId(Long groupId);
+
+    void deleteById(String emitterId);
+
+    void deleteEmitterAllByGroupId(Long groupId);
+
+    void deleteCacheAllByGroupId(Long groupId);
+}

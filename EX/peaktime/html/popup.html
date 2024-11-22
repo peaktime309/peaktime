@@ -1,3 +1,104 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2f3733a8813e6fd166ae6d5d36ae47ef82b5d6f5833d9c0a693f386c270bdace
-size 3064
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/tailwind.min.css" rel="stylesheet" />
+    <link href="../css/flowbite.min.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "netmarbleL";
+        src: url("../font/netmarbleL.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .main {
+        font-family: "netmarbleL";
+        width: 320px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="head w-full items-center">
+        <h2 class="text-lg text-bold">PeakTime</h2>
+        <img
+          src="../image/peaktime.png"
+          alt=""
+          style="width: 50px; height: 50px"
+        />
+      </div>
+      <div class="h-[10%] w-full flex justify-between">
+        <input
+          id="title"
+          maxlength="15"
+          class="block w-[60%] h-[100%] text-md p-2.5 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-300 focus:border-blue-300"
+        />
+        <div class="w-40 flex items-center ms-5">
+          <span class="length">
+            <span class="title_length">0</span>
+            / 15
+          </span>
+        </div>
+      </div>
+      <div class="w-full">
+        <textarea
+          id="savedText"
+          maxlength="3000"
+          rows="6"
+          class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-300 focus:border-blue-300"
+          placeholder="ctrl + shift + 1을 눌러 문장을 저장해주세요."
+        ></textarea>
+
+        <span class="length">
+          <span class="comment_length">0</span>
+          / 3000
+        </span>
+      </div>
+      <div class="w-full flex justify-center mt-0">
+        <button
+          id="save"
+          type="button"
+          class="me-5 text-white font-bold text-center bg-green-400 px-5 py-2.5 rounded-lg"
+        >
+          저장하기
+        </button>
+        <button
+          id="reset"
+          type="button"
+          class="text-white font-bold text-center bg-red-500 px-5 py-2.5 rounded-lg"
+        >
+          초기화
+        </button>
+      </div>
+      <button
+        id="addUrl"
+        type="button"
+        class="text-white font-bold text-center bg-blue-400 px-5 py-2.5 rounded-lg"
+      >
+        현재 URL 차단목록에 추가
+      </button>
+    </div>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script src="../js/flowbite.min.js"></script>
+  </body>
+</html>

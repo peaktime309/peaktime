@@ -1,3 +1,53 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2c846759bc0433a58926e0e58bb57ee6f448359e5de3eccb67f93810e818fb71
-size 1322
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/popup.css" type="text/css" />
+    <style>
+      @font-face {
+        font-family: "netmarbleL";
+        src: url("../font/netmarbleL.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+      .main {
+        font-family: "netmarbleL";
+        width: 320px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      .head {
+        display: flex;
+        justify-content: space-between;
+      }
+      .content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="head">
+        <h2>PeakTime</h2>
+        <img
+          src="../image/peaktime.png"
+          alt=""
+          style="width: 50px; height: 50px"
+        />
+      </div>
+      <div class="content">
+        <h2>프로그램에서 하이킹을 시작해주세요.</h2>
+      </div>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

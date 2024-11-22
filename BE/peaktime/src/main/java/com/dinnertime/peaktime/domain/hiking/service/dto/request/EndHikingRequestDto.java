@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8e6a62771d68e3aa296f3d1f345e1fe43b42b35e873b55278ff6296b18003b9
-size 602
+package com.dinnertime.peaktime.domain.hiking.service.dto.request;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class EndHikingRequestDto {
+
+    @NotNull
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime realEndTime;
+
+    @Valid
+    private List<ContentListRequestDto> contentList;
+}

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7ec49bf8a18f811c42c7413485ade2da54dc09c97de0f677452414c569c2ae3
-size 550
+package com.dinnertime.peaktime.domain.preset.repository;
+
+import com.dinnertime.peaktime.domain.preset.entity.Preset;
+import com.dinnertime.peaktime.domain.user.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface PresetRepository extends JpaRepository<Preset, Long> {
+
+    List<Preset> findAllByUser_UserIdOrderByPresetIdAsc(Long  userId);
+
+    Optional<Preset> findByPresetId(Long presetId);
+}

@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ba3c02db88810ba5e0b2c3cb5b3d4e947b16cfa3d3e03f7951dd1e4ea848d99c
-size 772
+package com.dinnertime.peaktime.domain.child.service.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+import org.hibernate.validator.constraints.Length;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString
+public class CreateChildRequestDto {
+
+    @NotNull
+    private Long groupId;
+
+    @NotBlank
+    @Length(min = 5, max = 15, message = "5자 이상 15자 이하의 아이디를 입력해주세요.")
+    private String childLoginId;
+
+    @NotBlank
+    @Length(min = 2, max = 15, message = "2자 이상 15자 이하의 닉네임을 입력주세요.")
+    private String childNickname;
+}

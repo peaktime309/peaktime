@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1652644ef8b4107f0c53be152e604dd558a298455128d0a11be9d77bba5b366a
-size 568
+package com.dinnertime.peaktime.domain.group.service.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.hibernate.validator.constraints.Length;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class GroupCreateRequestDto {
+
+    @NotBlank
+    @Length(max = 32, message = "그룹명은 최대 32자를 초과할 수 없습니다.")
+    private String title;
+
+    @NotNull
+    private Long presetId;
+}

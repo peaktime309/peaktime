@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:54a0c58f61d535c68cb1aa7f55876c6c3f6db4d9bd9580d6956304d4e1627cf7
-size 894
+package com.dinnertime.peaktime.domain.hiking.service.dto.query;
+
+import com.dinnertime.peaktime.domain.statistic.entity.StatisticContent;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+@Getter
+@ToString
+public class HikingDetailQueryDto {
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime startTime;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime endTime;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime realEndTime;
+
+    private Integer blockedSiteCount;
+
+    private Integer blockedProgramCount;
+
+    @Setter
+    private List<StatisticContent> visitedSiteList;
+
+    @Setter
+    private List<StatisticContent> visitedProgramList;
+}

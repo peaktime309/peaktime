@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:22fb2026241e0fe23336b1a18003d8f5cd8086939e8043b965138405b2026504
-size 823
+package com.dinnertime.peaktime.domain.hiking.service.dto.response;
+
+import com.dinnertime.peaktime.domain.hiking.service.dto.query.HikingCalendarQueryDto;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class HikingCalendarResponseDto {
+    private List<HikingCalendarQueryDto> hikingList;
+
+    @Builder
+    private HikingCalendarResponseDto(List<HikingCalendarQueryDto> hikingList) {
+        this.hikingList = hikingList;
+    }
+
+    public static HikingCalendarResponseDto createHikingCalenderResponseDto(List<HikingCalendarQueryDto> hikingList) {
+        return HikingCalendarResponseDto.builder()
+                .hikingList(hikingList)
+                .build();
+    }
+}
