@@ -131,14 +131,6 @@ public class RedisService {
 
     }
 
-    public void deleteTimerByTimer(Long groupId, int start, int end) {
-        String key = "timer:"+groupId;
-        ZSetOperations<String, String> zSet = stringRedisTemplate.opsForZSet();
-        log.info("타이머 제거 "+key+" "+start);
-
-        zSet.remove(key, start +"-"+end+"-"+groupId, String.valueOf(start));
-    }
-
     public void deleteTimerByTimer(Timer timer) {
         Long groupId = timer.getGroup().getGroupId();
 
