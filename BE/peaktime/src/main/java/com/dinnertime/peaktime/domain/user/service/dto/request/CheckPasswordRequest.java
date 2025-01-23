@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89256ae0a1d3d493bd6990e05ae7956eb9e6afb8bf837b75a8170adc0fe0b217
-size 389
+package com.dinnertime.peaktime.domain.user.service.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class CheckPasswordRequest {
+
+    @NotBlank(message = "잘못된 형식의 요청입니다.")
+    private String password;
+
+}

@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d8cd4c013f284745966fb23423e4e54941d6d5e2d4a3691268570e56ecd16b3
-size 1079
+package com.dinnertime.peaktime.domain.preset.service.dto.response;
+
+import com.dinnertime.peaktime.domain.preset.entity.Preset;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class SaveUrlPresetResponseDto {
+    private Long presetId;
+    private List<String> blockWebsiteArray;
+
+    @Builder
+    private SaveUrlPresetResponseDto(Long presetId, List<String> blockWebsiteArray) {
+        this.presetId = presetId;
+        this.blockWebsiteArray = blockWebsiteArray;
+    }
+
+    public static SaveUrlPresetResponseDto createSaveUrlPresetResponseDto(Preset preset) {
+        return SaveUrlPresetResponseDto.builder()
+                .presetId(preset.getPresetId())
+                .blockWebsiteArray(
+                        preset.getBlockWebsiteArray()
+                                .stream()
+                                .sorted()
+                                .toList()
+                )
+                .build();
+    }
+}

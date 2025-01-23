@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6460754474df0dbcc32385dbb940890f910a4c29a2091544693c2166a2018c98
-size 381
+package com.dinnertime.peaktime.global.auth.service.dto.request;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class SendCodeRequest {
+
+    @NotBlank(message = "잘못된 형식의 요청입니다.")
+    private String email;
+
+}

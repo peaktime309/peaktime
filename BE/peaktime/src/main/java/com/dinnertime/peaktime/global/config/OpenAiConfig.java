@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:65dede1306654ff66dbe650475a571388b2f3a1c387b8cffeefdc8868c4a723f
-size 767
+package com.dinnertime.peaktime.global.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+@Configuration
+public class OpenAiConfig {
+    @Value("${openai.api.key}")
+    private String openAiKey;
+    @Bean(name = "openAiRestTemplate")
+    public RestTemplate restTemplate(){
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getInterceptors().add((request, body, execution) -> {
+            request.getHeaders().add("Authorization", "Bearer " + openAiKey);
+            return execution.execute(request, body);
+        });
+        return restTemplate;
+    }
+}

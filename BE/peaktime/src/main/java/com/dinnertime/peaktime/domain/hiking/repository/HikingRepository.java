@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:810e6b4d416fd6d58740e68e723f5fc17be2db34006a31a6dc15bffb2021ec2e
-size 423
+package com.dinnertime.peaktime.domain.hiking.repository;
+
+import com.dinnertime.peaktime.domain.hiking.entity.Hiking;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface HikingRepository extends JpaRepository<Hiking, Long>, HikingRepositoryCustom {
+    Optional<Hiking> findByHikingId(Long hikingId);
+
+}

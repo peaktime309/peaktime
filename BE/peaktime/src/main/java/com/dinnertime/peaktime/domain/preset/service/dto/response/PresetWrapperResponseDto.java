@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c3f380bd23cebe1fca4dc0e810390f8aa13a32fc304dc2578c76eceba41d4a1
-size 1264
+package com.dinnertime.peaktime.domain.preset.service.dto.response;
+
+import com.dinnertime.peaktime.domain.preset.entity.Preset;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@ToString
+public class PresetWrapperResponseDto {
+
+    private List<PresetResponseDto> presetList;
+
+    @Builder
+    private PresetWrapperResponseDto(List<PresetResponseDto> presetList){
+        this.presetList = presetList;
+    }
+
+    public static PresetWrapperResponseDto buildPresetResponseDto(List<Preset> presets) {
+        List<PresetResponseDto> responseDto = presets.stream()
+                .map(PresetResponseDto::createPresetResponse)
+                .toList();
+
+        return PresetWrapperResponseDto.builder()
+                .presetList(responseDto)
+                .build();
+    }
+
+    public static PresetWrapperResponseDto buildPresetResponseDto(Preset preset) {
+        List<PresetResponseDto> responseDto = new ArrayList<>();
+        PresetResponseDto presetResponse = PresetResponseDto.createPresetResponse(preset);
+        responseDto.add(presetResponse);
+
+        return PresetWrapperResponseDto.builder()
+                .presetList(responseDto)
+                .build();
+    }
+
+}

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d8b37546cda5cb33939fcfd9a7b6a58897c31565e7b8a498f69daa0b393708da
-size 353
+package com.dinnertime.peaktime.domain.hiking.entity;
+
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+@Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Table(name = "calendars")
+@Getter
+public class Calendar {
+    @Id
+    private LocalDate date;
+}

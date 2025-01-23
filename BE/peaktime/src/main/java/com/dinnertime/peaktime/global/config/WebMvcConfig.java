@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3109b38e6837343a47403d41ee17c7bdacac5d1e14a319d23d37a03749234034
-size 677
+package com.dinnertime.peaktime.global.config;
+
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOriginPatterns("*")
+                .allowedMethods("GET", "POST", "PUT", "PATCH","DELETE", "OPTIONS")
+                .allowedHeaders("*")
+                .allowCredentials(true)
+                .maxAge(3000);
+    }
+}

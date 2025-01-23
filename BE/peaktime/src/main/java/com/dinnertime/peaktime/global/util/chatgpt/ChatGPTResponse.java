@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:352acff47ff16d6293229c697102ab0cf1906740d3e1801beed743452807675a
-size 437
+package com.dinnertime.peaktime.global.util.chatgpt;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class ChatGPTResponse {
+    private List<Choice> choices;
+
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Choice {
+        private int index;
+        private Message message;
+
+    }
+}
