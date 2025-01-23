@@ -1,12 +1,3 @@
-package com.dinnertime.peaktime.domain.timer.repository;
-
-import com.dinnertime.peaktime.domain.timer.entity.Timer;
-
-import java.time.LocalDateTime;
-import java.util.List;
-
-public interface TimerRepositoryCustom {
-    Boolean existsOverlappingTimers(Long groupId, LocalDateTime startTime, int attentionTime, int repeatDay);
-
-    List<Timer> findByGroup_GroupId(Long groupId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcc90c24d2a431727c1593cffc76c96624924619e224701d52ee3216d50e8bcd
+size 378

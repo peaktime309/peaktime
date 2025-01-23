@@ -1,18 +1,3 @@
-package com.dinnertime.peaktime.global.util.chatgpt;
-
-import lombok.Data;
-
-import java.util.ArrayList;
-import java.util.List;
-
-@Data
-public class ChatGPTRequest {
-    private String model;
-    private List<Message> messages;
-
-    public ChatGPTRequest(String model, String prompt) {
-        this.model = model;
-        this.messages =  new ArrayList<>();
-        this.messages.add(new Message("user", prompt));
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe698060d67c492ec1fd263d0642225ebc005130ccd66491e4674bc5699443d2
+size 418

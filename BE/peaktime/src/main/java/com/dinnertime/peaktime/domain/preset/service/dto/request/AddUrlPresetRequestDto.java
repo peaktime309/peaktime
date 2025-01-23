@@ -1,17 +1,3 @@
-package com.dinnertime.peaktime.domain.preset.service.dto.request;
-
-import jakarta.validation.constraints.NotNull;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class AddUrlPresetRequestDto {
-
-    // url이 다소 길어질 수 있어서 requestBody로 처리
-    @NotNull
-    private String url;
-
-    // presetId는 pathVariable로 받아와서 활용
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29dcbca9a8cd0f65f03cd6a9d14141379839666f6d42c3a9bef5a53a72acb39b
+size 458

@@ -1,15 +1,3 @@
-package com.dinnertime.peaktime.domain.user.service.dto.request;
-
-import jakarta.validation.constraints.NotBlank;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class UpdateNicknameRequest {
-
-    @NotBlank(message = "잘못된 형식의 요청입니다.")
-    private String nickname;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0b54d47b16928fe204c223874a48d1841e1ed7723d8fec876ad8c566704091d
+size 390

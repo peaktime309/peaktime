@@ -1,15 +1,3 @@
-package com.dinnertime.peaktime.domain.user.service.dto.request;
-
-import jakarta.validation.constraints.NotBlank;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class UpdateEmailRequest {
-
-    @NotBlank(message = "잘못된 형식의 요청입니다.")
-    private String email;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9959e03126a925b0be38178dc6f5276e5739599b79aff1ee3bed412d2de2cde8
+size 384
