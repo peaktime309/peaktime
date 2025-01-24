@@ -1,10 +1,16 @@
 <img src="./readmeImg/peaktime.png" alt="peaktime" width="128" height="128">
 
-# 집중 관리가 필요한 모든 순간, **PeakTime**
+# 집중 관리가 필요한 모든 순간, **[PeakTime](https://peaktime.me)**
 
 # Overview
 
 ![00-introPage.gif](./readmeImg/gif/00-introPage.gif)
+
+# File
+
+[PeakTime 프로그램 다운로드](https://drive.google.com/file/d/1GfyoawPAQc72GBIW-2-6vqCVgnrJYfqm/view?usp=sharing)
+<br>
+[PeakTime 확장프로그램](https://chromewebstore.google.com/detail/peaktime/mmfhicnmmemjolaepcgnekfpljoghebe)
 
 # PeakTime 서비스 화면
 
