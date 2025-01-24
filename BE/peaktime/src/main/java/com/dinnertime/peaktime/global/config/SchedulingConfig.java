@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:92d2a0b233c95c256307e18b687debc28e28e547fb9a884f3ac95831e839d885
-size 826
+package com.dinnertime.peaktime.global.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+
+//멀티스레드를 위한 설정
+@EnableScheduling
+@Configuration
+public class SchedulingConfig implements SchedulingConfigurer {
+
+    @Override
+    public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+        ThreadPoolTaskScheduler taskScheduler = new ThreadPoolTaskScheduler();
+        taskScheduler.setPoolSize(10);
+        taskScheduler.initialize();
+        taskRegistrar.setTaskScheduler(taskScheduler);
+    }
+}

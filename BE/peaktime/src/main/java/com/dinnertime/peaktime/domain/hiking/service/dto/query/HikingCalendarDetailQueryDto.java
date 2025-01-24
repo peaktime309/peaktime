@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:64883a2a5266f40e0d620566dfdf2c3ab3a84c417e0ed74d41d96b3cea7d7aab
-size 707
+package com.dinnertime.peaktime.domain.hiking.service.dto.query;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Getter;
+import lombok.ToString;
+
+import java.time.LocalDateTime;
+
+
+@Getter
+@ToString
+public class HikingCalendarDetailQueryDto {
+
+    private Long hikingId;
+
+    //백-> 프론트로 json으로 보낼때 직렬화
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime startTime;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime endTime;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime realEndTime;
+}

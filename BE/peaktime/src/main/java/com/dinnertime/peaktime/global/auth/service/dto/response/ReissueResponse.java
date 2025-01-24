@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d548f4b0c880faa2cf03ae802e88daf53652b2bf4485515b31798cbaf549774d
-size 603
+package com.dinnertime.peaktime.global.auth.service.dto.response;
+
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class ReissueResponse {
+
+    private String accessToken;
+
+    @Builder
+    private ReissueResponse(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public static ReissueResponse createReissueResponse(String accessToken) {
+        return ReissueResponse.builder()
+                .accessToken(accessToken)
+                .build();
+    }
+
+}

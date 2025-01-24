@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ac8038c07622b05067cac66f09261eac426cff6291cd11f07b31a840812c8e8
-size 638
+package com.dinnertime.peaktime.global.auth.service.dto.response;
+
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class IsDuplicatedResponse {
+
+    private Boolean isDuplicated;
+
+    @Builder
+    private IsDuplicatedResponse(Boolean isDuplicated) {
+        this.isDuplicated = isDuplicated;
+    }
+
+    public static IsDuplicatedResponse createIsDuplicatedResponse(Boolean isDuplicated) {
+        return IsDuplicatedResponse.builder()
+                .isDuplicated(isDuplicated)
+                .build();
+    }
+
+}
