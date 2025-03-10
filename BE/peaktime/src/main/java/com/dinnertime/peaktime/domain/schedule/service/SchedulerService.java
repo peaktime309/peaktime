@@ -22,6 +22,11 @@ public class SchedulerService {
     private final RedisService redisService;
     private final HikingRepository hikingRepository;
 
+    //일주일 
+    private static final int WEEK = 7;
+    private static final int DAYOFHOUR = 1440;
+    private static final int HOUROFMINUTE = 60;
+
     //매일 0시에 실행
     @Scheduled(cron = "0 0 0 * * *", zone = "Asia/Seoul")
     public void addScheduling() {
@@ -38,11 +43,11 @@ public class SchedulerService {
     @Scheduled(cron = "0 0/1 * * * *")
     public void send() {
         LocalDateTime now = LocalDateTime.now();
-        int day = 7 - now.getDayOfWeek().getValue();
+        int day = WEEK - now.getDayOfWeek().getValue();
         int hour = now.getHour();
         int minute = now.getMinute();
 
-        int start = day * 1440 + hour * 60 + minute;
+        int start = day * DAYOFHOUR + hour * HOUROFMINUTE + minute;
 
         List<String> timerList = redisService.findTimerByStart(start);
 
