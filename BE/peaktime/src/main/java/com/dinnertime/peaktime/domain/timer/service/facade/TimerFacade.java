@@ -23,13 +23,15 @@ public class TimerFacade {
     private final ScheduleService scheduleService;
     private final RedisService redisService;
 
+    private static final int MINUTE = 60;
+
     @Transactional
     public GroupDetailResponseDto createTimer(TimerCreateRequestDto requestDto) {
         Long groupId = requestDto.getGroupId();
         LocalDateTime startTime = requestDto.getStartTime();
         int attentionTime = requestDto.getAttentionTime();
         int repeatDay = requestDto.getRepeatDay();
-        int plusMinute = (startTime.getHour() * 60) + startTime.getMinute();
+        int plusMinute = (startTime.getHour() * MINUTE) + startTime.getMinute();
 
         // 타이머와 스케줄 db 저장
         Timer timer = timerService.postTimer(requestDto);
