@@ -6,6 +6,10 @@
 
 ![00-introPage.gif](./readmeImg/gif/00-introPage.gif)
 
+# 소개 영상
+
+[![소개영상](http://img.youtube.com/vi/VnaePY7QE80/0.jpg)](https://youtu.be/VnaePY7QE80) 
+
 # File
 
 [PeakTime 프로그램 다운로드](https://drive.google.com/file/d/1GfyoawPAQc72GBIW-2-6vqCVgnrJYfqm/view?usp=sharing)
